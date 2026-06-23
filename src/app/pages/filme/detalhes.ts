@@ -8,6 +8,7 @@ import { Filme } from '../../core/model/filme';
 import { Sessao } from '../../core/model/sessao';
 import { Observable, of } from 'rxjs';
 import { FilmeService } from '../../core/services/filme-service';
+import id from '@angular/common/locales/id';
 
 @Component({
   selector: 'app-detalhes',
@@ -27,9 +28,7 @@ export class DetalhesComponent implements OnInit {
     this.filme = of( {id: 1, nome: 'Toy Story 5', duracao: 105, genero: 'ANIMACAO', classificacao: 'LIVRE', ano: 2026, capa: 'https://ingresso-a.akamaihd.net/prd/img/movie/toy-story-5/709f36bd-9b92-49ab-8046-677758834769.webp', diretor: 'Pete Docter', elenco: 'Tom Hanks, Tim Allen, Annie Potts, Tony Hale', descricao: 'Woody e Buzz embarcam em uma nova aventura que testa os limites da amizade e da imaginação.', avaliacao: 9.2 });
 
     this.sessoes = of ([
-      { id: 1, horario: '11:00', sala: 'Sala 1' , preco: 19.99 },
-      { id: 2, horario: '13:30', sala: 'Sala 1' , preco: 19.99 },
-      { id: 3, horario: '17:00', sala: 'Sala 1' , preco: 19.99 }
+      { id: this.sessoes, horario: this.sessoes, sala: this.sessoes , preco: this.sessoes },
     ]);
   }
 
